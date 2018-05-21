@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <script id="book-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <h3>By {{author}}, {{isbn}}</h3>
+      <p>
+        <img src={{image_url}}/>
+        {{description}}
+      </p>
+    </script>
   </head>
   <body>
     <h1>Hello World!</h1>
+    <section id="books">
+
+    </section>
+    <section id="about">
+
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   </body>
 </html>

@@ -7,6 +7,6 @@ var app = app || {};
     protocol: window.location.protocol === 'https',  
     cloudUrl: 'https://bt-mg-booklist.herokuapp.com',
     localUrl: 'http://localhost:3000',
-    url: protocol ? cloudUrl : localUrl
+    apiUrl: protocol ? cloudUrl : localUrl
   };
 })(app)
