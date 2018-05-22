@@ -22,9 +22,3 @@ var app = app || {};
 
 })(app)
 
-//Define a function called errorCallback which takes an error object as an argument when invoked.
-errorCallback = function(err) {
-  //Log the error and pass the error to the errorView.initErrorPage method.
-  console.log(err);
-  app.errorView.initErrorPage(err);
-}
