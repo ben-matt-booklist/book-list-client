@@ -1,0 +1,70 @@
+
+@media only screen and (max-width: 999px) {
+
+main{
+    padding-left: 5%;
+    padding-right: 5%;
+    color: rgb(225, 218, 218);
+}
+
+header{
+    height: 100px;
+    width: 100%;
+}
+
+#main-h1{
+    font-size: 100px;
+    color: red;
+    margin-left: 5%;
+}
+
+#logo-section{
+    background: rgb(3, 123, 91);
+    height: 200px;
+    width: 100%;
+}
+
+#logo{
+    display: inline-block;
+    padding: 5%;
+    float: left;
+}
+
+#book-app{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    padding-top: 70px;
+}
+
+.book-view container{
+    background: rgb(206, 53, 53);
+}
+
+#my-books{
+    padding: 5%;
+    font-size: 50px;
+    color: red;
+}
+
+
+
+#book-img{
+    width: 90%;
+    height: 600px;
+    padding: 5%;
+    z-index: -1;
+    position: absolute;
+}
+
+#book-title{
+    width: 90%;
+    height: 200px;
+    background: rgb(3, 123, 91);
+    float: left;
+    bottom: 0;
+   
+}
+
+
+}
