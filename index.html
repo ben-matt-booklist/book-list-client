@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <script id="book-list-template" type="text/x-handlebars-template">
       <li class="book-item">
-          <h2>{{title}}</h2>
-          <h3>By {{author}}, {{isbn}}</h3>
-          <p>
-            <img src={{image_url}}/>
-            {{description}}
-          </p>
+
+        <div id="book">
+          <img id="book-img" src={{image_url}}/>
+          <section id="book-title">
+            <h2>{{title}}</h2>
+            <h3>By {{author}}</h3>
+          </section>
+        </div>
+        
       </li>
+      <link rel="stylesheet" type="text/css" href="styles/base.css">
+      <link rel="stylesheet" type="text/css" href="styles/icon.css">
+      <link rel="stylesheet" type="text/css" href="styles/layout.css">
+      <link rel="stylesheet" type="text/css" href="styles/modules.css">
+      <link rel="stylesheet" type="text/css" href="styles/reset.css">
     </script>
     <script id="error-template" type="text/x-handlebars-template">
       <p>{{status}}: {{statusText}}</p>
@@ -17,20 +26,29 @@
   </head>
   <body>
     <header>
-      <h1>Hello World!</h1>
+    <h1 id="main-h1">Lab 11</h1>
     </header>
+
     <main>
+
         <section class="error-view container">
           <h3>Something went wrong</h3>
           <section id="error-message"></section>
         </section>
+        <section id="logo-section">
+          <img id="logo" src="http://via.placeholder.com/100x100">
+          <h3 id="book-app">Book App</h3>
+        </section>
+
+
         <section class="book-view container">
-          <h3>My Books</h3>
+          <h3 id="my-books">My Books</h3>
           <ul id="book-list"></ul>
         </section>
+
         <section id="about">
-    
         </section>
+
     </main>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
