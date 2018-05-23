@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Book List</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/icons.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
     <script id="book-list-template" type="text/x-handlebars-template">
       <li class="book-item">
-
         <div id="book">
           <img id="book-img" src={{image_url}}/>
-          <section id="book-title">
+          <ul>
             <h2>{{title}}</h2>
             <h3>By {{author}}</h3>
-          </section>
+          </ul>
         </div>
-        
       </li>
-      <link rel="stylesheet" type="text/css" href="styles/base.css">
-      <link rel="stylesheet" type="text/css" href="styles/icon.css">
-      <link rel="stylesheet" type="text/css" href="styles/layout.css">
-      <link rel="stylesheet" type="text/css" href="styles/modules.css">
-      <link rel="stylesheet" type="text/css" href="styles/reset.css">
     </script>
+
     <script id="error-template" type="text/x-handlebars-template">
       <p>{{status}}: {{statusText}}</p>
     </script>
   </head>
   <body>
-    <header>
-    <h1 id="main-h1">Lab 11</h1>
+    <header class="bg-color-1 clearfix">
+      <section id='logo' class=>
+        <img src="http://via.placeholder.com/100x100">
+        <h1>Book App</h3>
+      </section>
+
+      <nav>
+        <div class="icon-menu"></div>
+        <ul>
+          <li><a href="#">View All Books</a></li>
+          <li><a href="#">Add A New Book</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <section class="error-view container">
+        <h3>Something went wrong</h3>
+        <section id="error-message"></section>
+      </section>
 
-        <section class="error-view container">
-          <h3>Something went wrong</h3>
-          <section id="error-message"></section>
-        </section>
-        <section id="logo-section">
-          <img id="logo" src="http://via.placeholder.com/100x100">
-          <h3 id="book-app">Book App</h3>
-        </section>
+      <section class="book-view container">
+        <h3 id="my-books">My Books</h3>
+        <ul id="book-list"></ul>
+      </section>
 
-
-        <section class="book-view container">
-          <h3 id="my-books">My Books</h3>
-          <ul id="book-list"></ul>
-        </section>
-
-        <section id="about">
-        </section>
+      <section id="about">
+      </section>
 
     </main>
     
