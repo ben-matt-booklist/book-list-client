@@ -36,6 +36,13 @@ var app = app || {};
       .then(callback)
       .catch(errorCallback);
   }
+
+  Book.fetchOne = callback => {
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books:id`)
+    .then((data => Book.loadAll(data)))
+    .then(callback)
+    .catch(errorCallback);
+  }
   
   module.Book = Book;
 })(app)
