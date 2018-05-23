@@ -1,70 +1,41 @@
-
-@media only screen and (max-width: 999px) {
-
-main{
-    padding-left: 5%;
-    padding-right: 5%;
-    color: rgb(225, 218, 218);
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-header{
-    height: 100px;
-    width: 100%;
+
+header, main, footer {
+    width: 90vw;
+    margin: 0 auto;
 }
 
-#main-h1{
-    font-size: 100px;
-    color: red;
-    margin-left: 5%;
+#logo {
+    float: left;
+    margin: 1em;
 }
 
-#logo-section{
-    background: rgb(3, 123, 91);
-    height: 200px;
-    width: 100%;
-}
-
-#logo{
-    display: inline-block;
-    padding: 5%;
+header img {
     float: left;
 }
 
-#book-app{
+h1 {
+    color: white;
+    font-size: 40px;
     display: inline-block;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    padding-top: 70px;
+    line-height: 100px;
 }
 
-.book-view container{
-    background: rgb(206, 53, 53);
+.icon-menu {
+    float: right;
+    margin: 1em;
+    font-size: 3em;
 }
 
-#my-books{
-    padding: 5%;
-    font-size: 50px;
-    color: red;
+nav ul {
+    clear: both;
 }
 
-
-
-#book-img{
-    width: 90%;
-    height: 600px;
-    padding: 5%;
-    z-index: -1;
-    position: absolute;
-}
-
-#book-title{
-    width: 90%;
-    height: 200px;
-    background: rgb(3, 123, 91);
-    float: left;
-    bottom: 0;
-   
-}
-
-
+nav li {
+    display: inline;
 }
