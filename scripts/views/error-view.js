@@ -20,5 +20,6 @@ var app = app || {};
     $('#error-message').append(app.render('error-template', err));
   }
 
+  module.errorView = errorView;
 })(app)
 

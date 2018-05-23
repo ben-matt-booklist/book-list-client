@@ -40,3 +40,15 @@ nav ul {
 nav li {
     display: inline;
 }
+
+form {
+    
+}
+
+input:not([type="submit"]), textarea {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 50%;
+    display: block;
+    resize: none;
+}

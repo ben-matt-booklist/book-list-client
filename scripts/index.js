@@ -27,3 +27,9 @@ var app = app || {};
   }
   
 })(app)
+
+$('.book-view').on('click', function(e){
+  e.preventDefault();
+  let book = app.Book.all.filter(book => book.book_id === parseInt(e.target.value))[0];
+  book ? book.fetchOne() : null;
+})
