@@ -11,27 +11,25 @@
 
     <script id="book-list-template" type="text/x-handlebars-template">
       <li class="book-item">
-        <div id="book">
-          <img id="book-img" src={{image_url}}/>
-          <ul>
-            <h2>{{title}}</h2>
-            <h3>By {{author}}</h3>
-
-            </section id='detail-view'></section>
-        </div>
-
-
-          </ul>
-        </div>
-
+        <img src={{image_url}}/>
+        <ul>
+          <li>{{title}}</li>
+          <li>By {{author}}</li>
+        </ul>
       </li>
+      <button value="{{book_id}}">More Info</button>
+    </script>
+    <script id="book-detail-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <ul>
+        <li>{{author}}</li>
+        <li>{{isbn}}</li>
+      </ul>
+      <img src={{image_url}}/>
+      <p>{{description}}</p>
     </script>
 
-    <script id="error-template" type="text/x-handlebars-template">s
-
-
     <script id="error-template" type="text/x-handlebars-template">
-
       <p>{{status}}: {{statusText}}</p>
     </script>
   </head>
@@ -58,8 +56,21 @@
       </section>
 
       <section class="book-view container">
-        <h3 id="my-books">My Books</h3>
+        <h2 id="my-books">My Books</h3>
         <ul id="book-list"></ul>
+      </section>
+
+      <section class="detail-view container"></section>
+
+      <section class="form-view container">
+        <h2>New Book</h2>
+        <form>
+          <input id="title-input" type="text" placeholder="title" required>
+          <input id="author-input" type="text" placeholder="author" required>
+          <input id="isbn-input" type="text" placeholder="isbn" required>
+          <input id="image-input" type="url" placeholder="image url" required>
+          <textarea id="description-input" required>description...</textarea>
+        </form>
       </section>
 
       <section id="about">

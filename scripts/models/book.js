@@ -37,8 +37,8 @@ var app = app || {};
       .catch(errorCallback);
   }
 
-  Book.fetchOne = callback => {
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books:id`)
+  Book.prototype.fetchOne = function(callback) {
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${this.book_id}`)
     .then((data => Book.loadAll(data)))
     .then(callback)
     .catch(errorCallback);
