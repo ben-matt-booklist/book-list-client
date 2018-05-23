@@ -9,23 +9,6 @@
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
-    <script id="book-list-template" type="text/x-handlebars-template">
-      <li class="book-item">
-        <div id="book">
-          <img id="book-img" src={{image_url}}/>
-          <ul>
-            <h2>{{title}}</h2>
-            <h3>By {{author}}</h3>
-
-            </section id='detail-view'></section>
-        </div>
-
-
-          </ul>
-        </div>
-
-      </li>
-    </script>
     <script id="error-template" type="text/x-handlebars-template">
       <p>{{status}}: {{statusText}}</p>
     </script>
@@ -41,7 +24,7 @@
         <div class="icon-menu"></div>
         <ul>
           <li><a href="#">View All Books</a></li>
-          <li><a href="new.html">Add A New Book</a></li>
+          <li><a href="#">Add A New Book</a></li>
         </ul>
       </nav>
     </header>
@@ -52,13 +35,7 @@
         <section id="error-message"></section>
       </section>
 
-      <section class="book-view container">
-        <h3 id="my-books">My Books</h3>
-        <ul id="book-list"></ul>
-      </section>
-
-      <section id="about">
-      </section>
+      <!-- Put the book details here -->
 
     </main>
     
@@ -70,7 +47,7 @@
     <script src="./scripts/views/book-view.js" type="text/javascript"></script>
     <script src="./scripts/views/error-view.js" type="text/javascript"></script>
     <script>
-      app.bookView.initIndexPage();
+
     </script>
   </body>
 </html>
