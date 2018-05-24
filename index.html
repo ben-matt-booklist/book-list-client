@@ -17,7 +17,7 @@
           <li>By {{author}}</li>
         </ul>
       </li>
-      <button value="{{book_id}}">More Info</button>
+      <a href="books/{{book_id}}">More Info</a>
     </script>
     <script id="book-detail-template" type="text/x-handlebars-template">
       <h2>{{title}}</h2>
@@ -43,8 +43,8 @@
       <nav>
         <div class="icon-menu"></div>
         <ul>
-          <li><a href="#">View All Books</a></li>
-          <li><a href="#">Add A New Book</a></li>
+          <li><a href="/">View All Books</a></li>
+          <li><a href="/books/new">Add A New Book</a></li>
         </ul>
       </nav>
     </header>
@@ -60,7 +60,8 @@
         <ul id="book-list"></ul>
       </section>
 
-      <section class="detail-view container"></section>
+      <section class="detail-view container">
+      </section>
 
       <section class="form-view container">
         <h2>New Book</h2>
@@ -70,6 +71,7 @@
           <input id="isbn-input" type="text" placeholder="isbn" required>
           <input id="image-input" type="url" placeholder="image url" required>
           <textarea id="description-input" required>description...</textarea>
+          <button type="submit">submit</button>
         </form>
       </section>
 
@@ -80,8 +82,10 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
     <script src="./scripts/index.js" type="text/javascript"></script>
+    <script src="./scripts/routes.js" type="text/javascript"></script>
     <script src="./scripts/models/book.js" type="text/javascript"></script>
     <script src="./scripts/views/book-view.js" type="text/javascript"></script>
     <script src="./scripts/views/error-view.js" type="text/javascript"></script>
