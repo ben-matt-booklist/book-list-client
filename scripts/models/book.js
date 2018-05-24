@@ -18,7 +18,6 @@ var app = app || {};
 
   //Define a Book.loadAll method which takes rows as an argument and sorts rows by title, maps over rows to create an array of Book instances, and assigns the new array of Books to Book.all.
   Book.loadAll = rows => {
-    console.log(rows);
     Book.all = rows.sort((a, b) => b.title - a.title).map(book => new Book(book));
   }
 
@@ -37,9 +36,9 @@ var app = app || {};
       .catch(errorCallback);
   }
 
-  Book.prototype.fetchOne = function(callback) {
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${this.book_id}`)
-    .then((data => Book.loadAll(data)))
+  Book.fetchOne = function(book_id, callback) {
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${book_id}`)
+    .then((data => $('.detail-view').append(app.render('book-detail-template', data))))
     .then(callback)
     .catch(errorCallback);
   }

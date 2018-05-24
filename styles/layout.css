@@ -41,10 +41,6 @@ nav li {
     display: inline;
 }
 
-form {
-    
-}
-
 input:not([type="submit"]), textarea {
     margin: 0 auto;
     margin-top: 1em;

@@ -16,6 +16,7 @@ var app = app || {};
 
   //Create a .showOnly method to reveal the containters of your single-page app
   module.showOnly = (selector) => {
+    console.log(selector);
     $('.container').hide();
     $(selector).show();
   }
@@ -28,8 +29,16 @@ var app = app || {};
   
 })(app)
 
-$('.book-view').on('click', function(e){
+$('#book-form').on('submit', function(e){
   e.preventDefault();
-  let book = app.Book.all.filter(book => book.book_id === parseInt(e.target.value))[0];
-  book ? book.fetchOne() : null;
+
+  let book = {
+    title: $('#title-input').val(),
+    author: $('#author-input').val(),
+    isbn: $('#isbn-input').val(),
+    image_url: $('#image-input').val(),
+    description: $('#description-input').val()
+  }
+  console.log(book);
+  $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`, book);
 })
