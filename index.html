@@ -27,6 +27,8 @@
       </ul>
       <img src={{image_url}}/>
       <p>{{description}}</p>
+      <button data-id="{{book_id}}" id="update" class="admin-only">Update Book</button>
+      <button data-id="{{book_id}}" id="delete" class="admin-only">Delete Book</button>
     </script>
 
     <script id="error-template" type="text/x-handlebars-template">
@@ -45,6 +47,7 @@
         <ul>
           <li><a href="/">View All Books</a></li>
           <li><a href="/books/new">Add A New Book</a></li>
+          <li><a href="/admin" id="login">Admin Login</a></li>
         </ul>
       </nav>
     </header>
@@ -75,6 +78,14 @@
         </form>
       </section>
 
+      <section class="admin-view container">
+        <h2>Admin Login</h2>
+        <form id="admin-form">
+          <input id="passphrase" type="text" placeholder="passphrase" required>
+          <button type="submit">submit</button>
+        </form>
+      </section>
+
       <section id="about">
       </section>
 
@@ -89,6 +100,7 @@
     <script src="./scripts/models/book.js" type="text/javascript"></script>
     <script src="./scripts/views/book-view.js" type="text/javascript"></script>
     <script src="./scripts/views/error-view.js" type="text/javascript"></script>
+    <script src="./scripts/views/admin-view.js" type="text/javascript"></script>
     <script>
       app.bookView.initIndexPage();
     </script>
