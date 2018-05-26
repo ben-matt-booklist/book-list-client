@@ -42,3 +42,10 @@ $('#book-form').on('submit', function(e){
   console.log(book);
   $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`, book);
 })
+
+$('#update-form').on('submit', function(e){
+  e.preventDefault();
+
+  
+  $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books`, book);
+})
