@@ -42,6 +42,23 @@ var app = app || {};
     .then(callback)
     .catch(errorCallback);
   }
+
+  Book.destroy = callback;{
+    $.delete(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${book_id}`)
+    .then((data => $('detail-view')(,data)))
+    .then(callback)
+    .catch(errorCallback);
+  }
+
+  Book.update = callback;{
+    $.put(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${book_id}`)
+    .then((data => x))
+    .then((data => $('detail-view')(,data)))
+    .then(callback)
+    .catch(errorCallback);
+  }
+
+  Book.name
   
   module.Book = Book;
 })(app)
